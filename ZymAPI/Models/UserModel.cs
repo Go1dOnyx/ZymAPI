@@ -10,6 +10,5 @@
         public string Middle_Name { get; set; } = string.Empty;
         public string Last_Name { get; set; } = string.Empty;
         public string Telephone { get; set; } = string.Empty;
-        public string Profile_Url { get; set; } = string.Empty;
     }
 }
