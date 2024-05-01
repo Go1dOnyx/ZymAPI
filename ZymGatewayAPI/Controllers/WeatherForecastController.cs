@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Account.Microservice.Controllers
+namespace ZymGatewayAPI.Controllers
 {
     [ApiController]
     [Route("[controller]")]

@@ -1,0 +1,6 @@
+@ZymGatewayAPI_HostAddress = http://localhost:5157
+
+GET {{ZymGatewayAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

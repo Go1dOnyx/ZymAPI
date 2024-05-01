@@ -1,4 +1,4 @@
-﻿namespace ZymAPI.Models
+﻿namespace Account.Microservice
 {
     public class UserModel
     {

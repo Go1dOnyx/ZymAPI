@@ -3,27 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZymGatewayAPI", "ZymAPI\ZymGatewayAPI.csproj", "{357A828B-861B-464A-AAB7-0B82E08F6DF1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ZymAPI.Tests", "ZymAPI.Tests\ZymAPI.Tests.csproj", "{3D12F872-7438-4CBC-99BD-9753D4C2EC98}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.DataAccess.EF", "ZymAPI.DataAccess.EF\Account.DataAccess.EF.csproj", "{C0C8D2A5-4AEE-4A4E-8DF5-97A666D1A6D5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Microservices", "Microservices", "{7A662442-B614-4262-9F8D-78A8FB9D60CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Account.Microservice", "Account.Microservice\Account.Microservice.csproj", "{1A99FC63-711A-4FE1-A72C-60660CB60850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Account.Microservice", "Account.Microservice\Account.Microservice.csproj", "{1A99FC63-711A-4FE1-A72C-60660CB60850}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Microservice", "Product.Microservice\Product.Microservice.csproj", "{6D3F5A3D-2CAC-48DB-848C-99EBC6F35C64}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.Microservice", "Product.Microservice\Product.Microservice.csproj", "{6D3F5A3D-2CAC-48DB-848C-99EBC6F35C64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.Microservice", "Orders.Microservice\Orders.Microservice.csproj", "{0E8B8BC9-5C81-4C30-B7AB-72FA51DBF9DA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orders.Microservice", "Orders.Microservice\Orders.Microservice.csproj", "{0E8B8BC9-5C81-4C30-B7AB-72FA51DBF9DA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{1DE2D6D9-6AA3-4AC7-8A25-155B0BFBA8CE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{4FEC6389-4AC4-43BB-A878-0E4E4497425E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.DataAccess.EF", "Products.DataAccess.EF\Product.DataAccess.EF.csproj", "{BD8789A9-96D0-425C-9585-D96C4130C892}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Product.DataAccess.EF", "Products.DataAccess.EF\Product.DataAccess.EF.csproj", "{BD8789A9-96D0-425C-9585-D96C4130C892}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Orders.DataAccess.EF", "Orders.DataAccess.EF\Orders.DataAccess.EF.csproj", "{052B1429-CFE4-4571-9E40-DD1C4956FB71}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Orders.DataAccess.EF", "Orders.DataAccess.EF\Orders.DataAccess.EF.csproj", "{052B1429-CFE4-4571-9E40-DD1C4956FB71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ZymGatewayAPI", "ZymGatewayAPI\ZymGatewayAPI.csproj", "{392D97D0-1F94-4F6F-BB11-C386050B0FC6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,10 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{357A828B-861B-464A-AAB7-0B82E08F6DF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{357A828B-861B-464A-AAB7-0B82E08F6DF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{357A828B-861B-464A-AAB7-0B82E08F6DF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{357A828B-861B-464A-AAB7-0B82E08F6DF1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{3D12F872-7438-4CBC-99BD-9753D4C2EC98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D12F872-7438-4CBC-99BD-9753D4C2EC98}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D12F872-7438-4CBC-99BD-9753D4C2EC98}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -63,6 +59,10 @@ Global
 		{052B1429-CFE4-4571-9E40-DD1C4956FB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{052B1429-CFE4-4571-9E40-DD1C4956FB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{052B1429-CFE4-4571-9E40-DD1C4956FB71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{392D97D0-1F94-4F6F-BB11-C386050B0FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{392D97D0-1F94-4F6F-BB11-C386050B0FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{392D97D0-1F94-4F6F-BB11-C386050B0FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{392D97D0-1F94-4F6F-BB11-C386050B0FC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

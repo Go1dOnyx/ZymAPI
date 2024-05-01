@@ -1,4 +1,4 @@
-namespace Account.Microservice
+namespace ZymGatewayAPI
 {
     public class WeatherForecast
     {
