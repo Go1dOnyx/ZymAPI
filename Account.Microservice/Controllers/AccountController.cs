@@ -10,6 +10,7 @@ namespace Account.Microservice.Controllers
         [HttpPost]
         public IActionResult CreateUser()
         {
+            //validate here or either on the service folder section if account exist or not.
             return View();
         }
 
