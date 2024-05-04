@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Product.DataAccess.EF.Repositories
+namespace Product.DataAccess.EF.Repositories.Contract
 {
     internal interface IProductRepository
     {

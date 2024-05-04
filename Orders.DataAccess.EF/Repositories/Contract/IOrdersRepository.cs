@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Orders.DataAccess.EF.Repositories
+namespace Orders.DataAccess.EF.Repositories.Contract
 {
     internal interface IOrdersRepository
     {

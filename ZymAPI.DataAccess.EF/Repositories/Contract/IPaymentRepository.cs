@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Account.DataAccess.EF.Repositories
+namespace Account.DataAccess.EF.Repositories.Contract
 {
     internal class IPaymentRepository
     {
