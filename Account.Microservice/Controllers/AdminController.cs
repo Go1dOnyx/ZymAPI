@@ -22,7 +22,7 @@ namespace Account.Microservice.Controllers
 
         //Get all admins
         [HttpGet]
-        public List<IActionResult> GetAdminList() 
+        public IQueryable<IActionResult> GetAdminList() 
         {
             return View();
         }

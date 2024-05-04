@@ -23,7 +23,7 @@ namespace Account.Microservice.Controllers
 
         //Get all users
         [HttpGet]
-        public List<IActionResult> GetAllUsers()
+        public IQueryable<IActionResult> GetAllUsers() //IQueryable
         {
             return View();
         }

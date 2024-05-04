@@ -22,7 +22,7 @@ namespace Account.Microservice.Controllers
 
         //Get all addresses
         [HttpGet]
-        public List<IActionResult> GetAllAddr() 
+        public IQueryable<IActionResult> GetAllAddr() 
         {
             return View();
         }

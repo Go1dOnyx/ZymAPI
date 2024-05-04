@@ -22,7 +22,7 @@ namespace Account.Microservice.Controllers
 
         //Get all list of payments
         [HttpGet]
-        public List<IActionResult> GetAllPayment() 
+        public IQueryable<IActionResult> GetAllPayment() 
         {
             return View();
         }
