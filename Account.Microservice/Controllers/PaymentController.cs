@@ -8,35 +8,35 @@ namespace Account.Microservice.Controllers
     {
         //Create new payment
         [HttpPost]
-        public IActionResult CreatePayment()
+        public async Task<ActionResult> CreatePayment([FromBody] PaymentModel payment)
         {
             return View();
         }
 
         //Get payment info
         [HttpGet]
-        public IActionResult GetPayment() 
+        public async Task<ActionResult> GetPayment() 
         {
             return View();
         }
 
         //Get all list of payments
         [HttpGet]
-        public IQueryable<IActionResult> GetAllPayment() 
+        public async Task<IQueryable<ActionResult>> GetAllPayment() 
         {
             return View();
         }
 
         //Edit payment info
         [HttpPut]
-        public IActionResult EditPayment() 
+        public async Task<ActionResult> EditPayment() 
         {
             return View();    
         }
 
         //Delete payment info
         [HttpDelete]
-        public IActionResult DeletePayment() 
+        public async Task<ActionResult> DeletePayment() 
         {
             return View();
         }

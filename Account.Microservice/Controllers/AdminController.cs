@@ -8,35 +8,35 @@ namespace Account.Microservice.Controllers
     {
         //Create a new admin user
         [HttpPost]
-        public IActionResult CreateAdmin()
+        public async Task<ActionResult> CreateAdmin([FromBody] AdminModel admin)
         {
             return View();
         }
 
         //Get admin info
         [HttpGet]
-        public IActionResult GetAdmin() 
+        public async Task<ActionResult> GetAdmin() 
         {
             return View();
         }
 
         //Get all admins
         [HttpGet]
-        public IQueryable<IActionResult> GetAdminList() 
+        public async Task<IQueryable<ActionResult>> GetAdminList() 
         {
             return View();
         }
 
         //Edit admin user
         [HttpPut]
-        public IActionResult EditAdmin() 
+        public async Task<ActionResult> EditAdmin() 
         {
             return View();
         }
 
         //Delete admin user
         [HttpDelete]
-        public IActionResult DeleteAdmin() 
+        public async Task<ActionResult> DeleteAdmin() 
         {
             return View();
         }

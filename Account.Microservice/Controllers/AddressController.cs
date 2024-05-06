@@ -8,35 +8,35 @@ namespace Account.Microservice.Controllers
     {
         //Create new address
         [HttpPost]
-        public IActionResult CreateAddr()
+        public async Task<ActionResult> CreateAddr([FromBody] AddressModel)
         {
             return View();
         }
 
         //Get address info
         [HttpGet]
-        public IActionResult GetAddr() 
+        public async Task<ActionResult> GetAddr() 
         {
             return View();
         }
 
         //Get all addresses
         [HttpGet]
-        public IQueryable<IActionResult> GetAllAddr() 
+        public async Task<IQueryable<ActionResult>> GetAllAddr() 
         {
             return View();
         }
 
         //Edit address
         [HttpPut]
-        public IActionResult EditAddr()
+        public async Task<ActionResult> EditAddr()
         {
             return View();
         }
 
         //Delete address
         [HttpDelete]
-        public IActionResult DeleteAddr()
+        public async Task<ActionResult> DeleteAddr()
         {
             return View();
         }

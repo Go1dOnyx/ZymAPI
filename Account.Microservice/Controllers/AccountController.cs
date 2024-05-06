@@ -8,7 +8,7 @@ namespace Account.Microservice.Controllers
     {
         //Create new user
         [HttpPost]
-        public IActionResult CreateUser()
+        public async Task<ActionResult> CreateUser([FromBody]UserModel user)
         {
             //validate here or either on the service folder section if account exist or not.
             return View();
@@ -16,28 +16,28 @@ namespace Account.Microservice.Controllers
 
         //Get user information 
         [HttpGet]
-        public IActionResult GetUser()
+        public async Task<ActionResult> GetUser()
         {
             return View();
         }
 
         //Get all users
         [HttpGet]
-        public IQueryable<IActionResult> GetAllUsers() //IQueryable
+        public async Task<IQueryable<ActionResult>> GetAllUsers() //IQueryable
         {
             return View();
         }
 
         //Update user info
         [HttpPut]
-        public IActionResult UpdateUser()
+        public async Task<ActionResult> UpdateUser()
         {
             return View();
         }
 
         //Delete existing user
         [HttpDelete]
-        public IActionResult DeleteUser()
+        public async Task<ActionResult> DeleteUser()
         {
             return View();
         }
