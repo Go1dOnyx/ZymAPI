@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Account.DataAccess.EF.Repositories.Contract
 {
-    internal interface IAccountRepository
+    public interface IAccountRepository
     {
         /*
             Task<Account> CreateAccountAsync(Account user);

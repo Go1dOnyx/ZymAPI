@@ -18,6 +18,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Account.Microservice\Account.Microservice.csproj" />
+    <ProjectReference Include="..\ZymAPI.DataAccess.EF\Account.DataAccess.EF.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Using Include="Xunit" />
   </ItemGroup>
 
