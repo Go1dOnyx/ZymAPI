@@ -11,18 +11,18 @@ namespace Account.Microservice.Controllers
         public async Task<ActionResult> CreateUser([FromBody]UserModel user)
         {
             //validate here or either on the service folder section if account exist or not.
-            return View();
+            return Ok(user);
         }
 
         //Get user information 
-        [HttpGet]
+        [HttpGet("{id}")]
         public async Task<ActionResult> GetUser()
         {
-            return View();
+            return Ok();
         }
 
         //Get all users
-        [HttpGet]
+        [HttpGet("getusers/{id}")]
         public async Task<IQueryable<ActionResult>> GetAllUsers() //IQueryable
         {
             return View();
