@@ -21,10 +21,10 @@ namespace Product.Microservice.Controllers
 
         //Get all products
         [HttpGet]
-        public async Task<IQueryable<ActionResult>> GetAllProducts() 
-        {
-            return View();
-        }
+      ///  public async Task<IQueryable<ActionResult>> GetAllProducts() 
+      //  {
+       //     return View();
+      //  }
 
         [HttpPut]
         public async Task<ActionResult> EditProduct(int productID) 

@@ -22,11 +22,11 @@ namespace Account.Microservice.Controllers
         }
 
         //Get all users
-        [HttpGet("getusers/{id}")]
-        public async Task<IQueryable<ActionResult>> GetAllUsers() //IQueryable
-        {
-            return View();
-        }
+        //[HttpGet("getusers/{id}")]
+        //public async Task<IQueryable<ActionResult>> GetAllUsers() //IQueryable
+        //{
+            //return View();
+        //}
 
         //Update user info
         [HttpPut]

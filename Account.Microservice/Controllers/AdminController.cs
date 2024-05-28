@@ -21,11 +21,11 @@ namespace Account.Microservice.Controllers
         }
 
         //Get all admins
-        [HttpGet]
-        public async Task<IQueryable<ActionResult>> GetAdminList() 
-        {
-            return View();
-        }
+        //[HttpGet]
+       // public async Task<IQueryable<ActionResult>> GetAdminList() 
+        //{
+            //return View();
+        //}
 
         //Edit admin user
         [HttpPut]

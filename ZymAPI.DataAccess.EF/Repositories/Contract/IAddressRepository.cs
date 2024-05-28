@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Account.DataAccess.EF.Models;
 
 namespace Account.DataAccess.EF.Repositories.Contract
 {
-    internal class IAddressRepository
+    internal interface IAddressRepository
     {
-        /*
             Task<Address> CreateAddrAsync(Address addr);
 
             Task<Address> GetAddrByIdAsync(int addrID);
@@ -18,6 +18,5 @@ namespace Account.DataAccess.EF.Repositories.Contract
             Task<Address> EditAddrAsync(int addrID);
 
             Task<bool> DeleteAddrAsync(int addrID);
-         */
     }
 }

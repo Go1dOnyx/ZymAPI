@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Account.DataAccess.EF.Models;
 
 namespace Account.DataAccess.EF.Repositories.Contract
 {
     public interface IAccountRepository
     {
-        /*
-            Task<Account> CreateAccountAsync(Account user);
+            Task<User> CreateAccountAsync(User user);
 
-            Task<Account> GetAccountByIdAsync(int userID);
+            Task<User> GetAccountByIdAsync(int userID);
 
-            Task<IQueryable<Account>> GetAllAccountsAsync();
+            Task<IQueryable<User>> GetAllAccountsAsync();
 
-            Task<Account> EditAccountAsync(int userID);
+            Task<User> EditAccountAsync(int userID);
 
             Task<bool> DeleteAccountAsync(int userID);
-        */
     }
 }

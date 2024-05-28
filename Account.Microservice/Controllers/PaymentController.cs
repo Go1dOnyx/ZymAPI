@@ -22,10 +22,10 @@ namespace Account.Microservice.Controllers
 
         //Get all list of payments
         [HttpGet]
-        public async Task<IQueryable<ActionResult>> GetAllPayment() 
-        {
-            return View();
-        }
+        //public async Task<IQueryable<ActionResult>> GetAllPayment() 
+        //{
+           // return View();
+        //}
 
         //Edit payment info
         [HttpPut]

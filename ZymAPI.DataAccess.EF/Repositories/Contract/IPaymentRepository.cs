@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Account.DataAccess.EF.Models;
 
 namespace Account.DataAccess.EF.Repositories.Contract
 {
-    internal class IPaymentRepository
+    internal interface IPaymentRepository
     {
-        /*
                Task<Payment> CreatePaymentAsync(Payment pay);
 
                Task<Payment> GetPaymentByIdAsync(int payID);
@@ -20,6 +20,5 @@ namespace Account.DataAccess.EF.Repositories.Contract
                Task<Payment> EditPaymentAsync(int payID);
 
                Task<bool> DeletePaymentAsync(int payID);
-        */
     }
 }

@@ -8,7 +8,7 @@ namespace Account.Microservice.Controllers
     {
         //Create new address
         [HttpPost]
-        public async Task<ActionResult> CreateAddr([FromBody] AddressModel)
+        public async Task<ActionResult> CreateAddr(/*[FromBody] AddressModel*/)
         {
             return View();
         }
@@ -22,10 +22,10 @@ namespace Account.Microservice.Controllers
 
         //Get all addresses
         [HttpGet]
-        public async Task<IQueryable<ActionResult>> GetAllAddr() 
-        {
-            return View();
-        }
+       // public async Task<IQueryable<ActionResult>> GetAllAddr() 
+        //{
+        //    return View();
+        //}
 
         //Edit address
         [HttpPut]
