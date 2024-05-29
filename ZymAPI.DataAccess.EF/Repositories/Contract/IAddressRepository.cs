@@ -9,14 +9,14 @@ namespace Account.DataAccess.EF.Repositories.Contract
 {
     internal interface IAddressRepository
     {
-            Task<Address> CreateAddrAsync(Address addr);
+        Task<Address> CreateAddrAsync(Address addr);
 
-            Task<Address> GetAddrByIdAsync(int addrID);
+        Task<Address> GetAddrByIdAsync(int addrID);
 
-            Task<IQueryable<Address>> GetAllAddrAsync();
+        Task<IQueryable<Address>> GetAllAddrAsync();
 
-            Task<Address> EditAddrAsync(int addrID);
+        Task<Address> EditAddrAsync(int addrID);
 
-            Task<bool> DeleteAddrAsync(int addrID);
+        Task<bool> DeleteAddrAsync(int addrID);
     }
 }

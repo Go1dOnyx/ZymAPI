@@ -24,4 +24,17 @@ public partial class User
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
+
+    public User(Guid userID, string userName, string email, string password, string fName, string mName, string lName, string phone) 
+    {
+        UserId = userID;
+        UserName = userName;
+        Email = email;
+        PasswordHash = password;
+        FirstName = fName;
+        MiddleName = mName;
+        LastName = lName;
+        Telephone = phone;
+    }
+    public User() { }
 }

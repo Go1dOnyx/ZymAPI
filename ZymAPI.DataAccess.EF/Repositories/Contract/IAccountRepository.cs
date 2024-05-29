@@ -9,14 +9,14 @@ namespace Account.DataAccess.EF.Repositories.Contract
 {
     public interface IAccountRepository
     {
-            Task<User> CreateAccountAsync(User user);
+        Task<User> CreateAccountAsync(User user);
 
-            Task<User> GetAccountByIdAsync(int userID);
+        Task<User> GetAccountByIdAsync(User userID);
 
-            Task<IQueryable<User>> GetAllAccountsAsync();
+        Task<IQueryable<User>> GetAllAccountsAsync();
 
-            Task<User> EditAccountAsync(int userID);
+        Task<User> EditAccountAsync(User userID);
 
-            Task<bool> DeleteAccountAsync(int userID);
+        Task<bool> DeleteAccountAsync(User userID);
     }
 }

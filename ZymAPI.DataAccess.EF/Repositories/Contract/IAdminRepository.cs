@@ -9,14 +9,14 @@ namespace Account.DataAccess.EF.Repositories.Contract
 {
     internal interface IAdminRepository
     {
-            Task<Admin> CreateAdminAsync(Admin user);
+        Task<Admin> CreateAdminAsync(Admin user);
 
-            Task<Admin> GetAdminByIdAsync(int adminID);
+        Task<Admin> GetAdminByIdAsync(int adminID);
 
-            Task<IQueryable<Admin>> GetAllAdminsAsync();
+        Task<IQueryable<Admin>> GetAllAdminsAsync();
 
-            Task<Admin> EditAdminAsync(int adminID);
+        Task<Admin> EditAdminAsync(int adminID);
 
-            Task<bool> DeleteAdminAsync(int adminID);
+        Task<bool> DeleteAdminAsync(int adminID);
     }
 }
