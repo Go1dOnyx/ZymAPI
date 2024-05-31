@@ -11,12 +11,12 @@ namespace Account.DataAccess.EF.Repositories.Contract
     {
         Task<User> CreateAccountAsync(User user);
 
-        Task<User> GetAccountByIdAsync(User userID);
+        Task<User> GetAccountByIdAsync(Guid userID);
 
         Task<IQueryable<User>> GetAllAccountsAsync();
 
-        Task<User> EditAccountAsync(User userID);
+        Task<User> EditAccountAsync(User user);
 
-        Task<bool> DeleteAccountAsync(User userID);
+        Task<bool> DeleteAccountAsync(User user);
     }
 }

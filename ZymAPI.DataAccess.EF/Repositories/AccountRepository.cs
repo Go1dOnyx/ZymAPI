@@ -10,9 +10,10 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace Account.DataAccess.EF.Repositories
 {
-    internal class AccountRepository: Contract.IAccountRepository
+    public class AccountRepository: Contract.IAccountRepository
     {
         private readonly AccountContext _accoutContext;
+
         public AccountRepository(AccountContext dbContext) 
         {
             _accoutContext = dbContext;
@@ -28,13 +29,13 @@ namespace Account.DataAccess.EF.Repositories
 
             return user;
         }
-        public async Task<User> GetAccountByIdAsync(User user) 
+        public async Task<User> GetAccountByIdAsync(Guid userID) 
         {
-            User? getUser = await _accoutContext.Users.FindAsync(user.UserId); //ok if returned as null.
+            User? getUser = await _accoutContext.Users.FindAsync(userID); //ok if returned as null.
 
             _accoutContext.Dispose();
 
-            return getUser ?? throw new InvalidOperationException($"{user.UserId} not found.");
+            return getUser ?? throw new InvalidOperationException($"User not found.");
 
         }
         public async Task<IQueryable<User>> GetAllAccountsAsync() 
@@ -79,6 +80,8 @@ namespace Account.DataAccess.EF.Repositories
                 _accoutContext.SaveChanges();
 
                 _accoutContext.Dispose();
+
+                return true;
             }
 
             return false;

@@ -13,12 +13,12 @@ namespace Account.DataAccess.EF.Repositories.Contract
 
         Task<Payment> GetPaymentByIdAsync(int payID);
 
-        Task<IQueryable<Payment>> GetAllPayments();
+        Task<IQueryable<Payment>> GetAllPaymentsAsync();
 
-        Task<IQueryable<Payment>> GetAllPaymentsByUserIDAsync(int userID); //payID or userID?
+        Task<IQueryable<Payment>> GetAllPaymentsByUserIdAsync(Guid userID); //payID or userID?
 
-        Task<Payment> EditPaymentAsync(int payID);
+        Task<Payment> EditPaymentByIdAsync(Payment pay);
 
-        Task<bool> DeletePaymentAsync(int payID);
+        Task<bool> DeletePaymentByIdAsync(int payID);
     }
 }

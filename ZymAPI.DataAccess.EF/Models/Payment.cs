@@ -20,4 +20,15 @@ public partial class Payment
     public string CardType { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
+
+    public Payment(int payID, Guid userID, string cardName, string secHash, string expDate, string cardType) 
+    {
+        PaymentId = payID;
+        UserId = userID;
+        CardholderName = cardName;
+        SecHash = secHash;
+        ExpirationDate = expDate;
+        CardType = cardType;
+    }
+    public Payment() { }
 }

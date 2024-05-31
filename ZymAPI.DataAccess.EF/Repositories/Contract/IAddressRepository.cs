@@ -7,16 +7,18 @@ using Account.DataAccess.EF.Models;
 
 namespace Account.DataAccess.EF.Repositories.Contract
 {
-    internal interface IAddressRepository
+    public interface IAddressRepository
     {
         Task<Address> CreateAddrAsync(Address addr);
 
-        Task<Address> GetAddrByIdAsync(int addrID);
+        Task<Address> GetAddrByIdAsync(Address addr);
 
         Task<IQueryable<Address>> GetAllAddrAsync();
 
-        Task<Address> EditAddrAsync(int addrID);
+        Task<IQueryable<Address>> GetAllAddrByIdAsync(Guid userID);
 
-        Task<bool> DeleteAddrAsync(int addrID);
+        Task<Address> EditAddrAsync(Address addr);
+
+        Task<bool> DeleteAddrAsync(Address addr);
     }
 }

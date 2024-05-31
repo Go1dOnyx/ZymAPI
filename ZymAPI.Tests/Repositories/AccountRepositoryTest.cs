@@ -9,7 +9,7 @@ using Account.Microservice;
 
 namespace ZymAPI.Tests.Repositories
 {
-    internal class AccountRepositoryTest: IAccountRepository
+    internal class AccountRepositoryTest //: IAccountRepository
     {
         /*
         private readonly List<Users> _userList;

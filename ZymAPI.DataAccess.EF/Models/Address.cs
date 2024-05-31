@@ -22,4 +22,16 @@ public partial class Address
     public string Country { get; set; } = null!;
 
     public virtual User User { get; set; } = null!;
+
+    public Address(Guid addrID, Guid userID, string street, string apt, string state, int zip, string country) 
+    {
+        AddrId = addrID;
+        UserId = userID;
+        Street = street;
+        Apt = apt;
+        State = state;
+        ZipCode = zip;
+        Country = country;
+    }
+    public Address() { }
 }

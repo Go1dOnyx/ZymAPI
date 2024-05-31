@@ -1,35 +1,61 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Account.DataAccess.EF.Context;
+using Account.DataAccess.EF.Repositories;
+using Account.DataAccess.EF.Models;
+using Account.DataAccess.EF.Repositories.Contract;
 
 namespace Account.Microservice.Controllers
 {
-    [Route("api/[Contorller]")]
+    [Route("api/[Controller]")]
     [ApiController]
     public class AccountController : Controller
     {
+        private readonly IAccountRepository _accountRepository;
+        public AccountController(AccountContext dbContext) 
+        {
+            _accountRepository = new AccountRepository(dbContext);
+        }
+
         //Create new user
         [HttpPost]
-        public async Task<ActionResult> CreateUser([FromBody]UserModel user)
+        public async Task<ActionResult> CreateUser([FromBody]User user)
         {
-            //validate here or either on the service folder section if account exist or not.
-            return Ok(user);
+            if (ModelState.IsValid && user != null)
+            {
+                await _accountRepository.CreateAccountAsync(user);
+
+                return Ok();
+            }
+            
+            throw new InvalidOperationException();
         }
 
         //Get user information 
         [HttpGet("{id}")]
-        public async Task<ActionResult> GetUser()
+        public async Task<ActionResult> GetUser(Guid userID)
         {
-            return Ok();
+            if (userID != Guid.Empty) 
+            {
+                User getUser = await _accountRepository.GetAccountByIdAsync(userID);
+
+                return Ok(getUser);
+            }
+
+            throw new InvalidOperationException();
         }
 
         //Get all users
         //[HttpGet("getusers/{id}")]
-        //public async Task<IQueryable<ActionResult>> GetAllUsers() //IQueryable
-        //{
-            //return View();
-        //}
+        [HttpGet("users")]
+        public async Task<IQueryable<User>> GetAllUsers() //IQueryable
+        {
+            IQueryable<User> getAllUsers = await _accountRepository.GetAllAccountsAsync();
+
+            return getAllUsers;
+        }
 
         //Update user info
-        [HttpPut]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateUser()
         {
             return View();
