@@ -1,5 +1,6 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Account.DataAccess.EF.Models;
 
@@ -21,8 +22,10 @@ public partial class User
 
     public string Telephone { get; set; } = null!;
 
+    [NotMapped]
     public virtual ICollection<Address> Addresses { get; set; } = new List<Address>();
 
+    [NotMapped]
     public virtual ICollection<Payment> Payments { get; set; } = new List<Payment>();
 
     public User(Guid userID, string userName, string email, string password, string fName, string mName, string lName, string phone) 

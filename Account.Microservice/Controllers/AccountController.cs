@@ -11,14 +11,14 @@ namespace Account.Microservice.Controllers
     public class AccountController : Controller
     {
         private readonly IAccountRepository _accountRepository;
-        public AccountController(AccountContext dbContext) 
+        public AccountController(AccountContext dbContext)
         {
             _accountRepository = new AccountRepository(dbContext);
         }
 
         //Create new user
         [HttpPost]
-        public async Task<ActionResult> CreateUser([FromBody]User user)
+        public async Task<ActionResult> CreateUser([FromBody] User user)
         {
             if (ModelState.IsValid && user != null)
             {
@@ -26,15 +26,15 @@ namespace Account.Microservice.Controllers
 
                 return Ok();
             }
-            
+
             throw new InvalidOperationException();
         }
 
         //Get user information 
-        [HttpGet("{id}")]
+        [HttpGet]
         public async Task<ActionResult> GetUser(Guid userID)
         {
-            if (userID != Guid.Empty) 
+            if (userID != Guid.Empty)
             {
                 User getUser = await _accountRepository.GetAccountByIdAsync(userID);
 
@@ -55,17 +55,17 @@ namespace Account.Microservice.Controllers
         }
 
         //Update user info
-        [HttpPut("{id}")]
-        public async Task<ActionResult> UpdateUser()
+        [HttpPut]
+        public async Task<ActionResult> UpdateUser(User user)
         {
-            return View();
+            return Ok();
         }
 
         //Delete existing user
         [HttpDelete]
-        public async Task<ActionResult> DeleteUser()
+        public async Task<ActionResult> DeleteUser(Guid userID)
         {
-            return View();
+            return Ok();
         }
     }
 }

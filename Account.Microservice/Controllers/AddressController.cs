@@ -2,7 +2,7 @@
 
 namespace Account.Microservice.Controllers
 {
-    [Route("api/[Contorller]")]
+    [Route("api/[Controller]")]
     [ApiController]
     public class AddressController : Controller
     {
@@ -10,18 +10,18 @@ namespace Account.Microservice.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateAddr(/*[FromBody] AddressModel*/)
         {
-            return View();
+            return Ok();
         }
 
         //Get address info
         [HttpGet]
         public async Task<ActionResult> GetAddr() 
         {
-            return View();
+            return Ok();
         }
 
         //Get all addresses
-        [HttpGet]
+        //[HttpGet]
        // public async Task<IQueryable<ActionResult>> GetAllAddr() 
         //{
         //    return View();
@@ -31,14 +31,14 @@ namespace Account.Microservice.Controllers
         [HttpPut]
         public async Task<ActionResult> EditAddr()
         {
-            return View();
+            return Ok();
         }
 
         //Delete address
         [HttpDelete]
         public async Task<ActionResult> DeleteAddr()
         {
-            return View();
+            return Ok();
         }
     }
 }

@@ -10,14 +10,14 @@ namespace Account.Microservice.Controllers
         [HttpPost]
         public async Task<ActionResult> CreateAdmin([FromBody] AdminModel admin)
         {
-            return View();
+            return Ok();
         }
 
         //Get admin info
         [HttpGet]
         public async Task<ActionResult> GetAdmin() 
         {
-            return View();
+            return Ok();
         }
 
         //Get all admins
@@ -31,14 +31,14 @@ namespace Account.Microservice.Controllers
         [HttpPut]
         public async Task<ActionResult> EditAdmin() 
         {
-            return View();
+            return Ok();
         }
 
         //Delete admin user
         [HttpDelete]
         public async Task<ActionResult> DeleteAdmin() 
         {
-            return View();
+            return Ok();
         }
     }
 }
